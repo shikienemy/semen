@@ -9,7 +9,7 @@ class Car:
         self.plate = plate
         self.gear = gear
         self.headlights = headlights
-        self.doors = doors
+        
         self.engine = engine
 
     def display_info(self):
