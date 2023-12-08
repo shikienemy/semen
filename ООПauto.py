@@ -34,6 +34,11 @@ class Car:
 
 
 class CarManager:
+
+    def remove_all_cars(self):
+        self.cars = []
+        print("Все машины удалены")
+
     def __init__(self):
         self.cars = []
 
@@ -108,7 +113,7 @@ if __name__ == "__main__":
         print('"Автомобили"')
         print('Меню:\n1. Добавить автомобиль \n2. Удалить автомобиль \
         \n3. Показать список автомобилей \n4. Найти автомобиль в списке \
-        \n5. Обновить информацию об автомобиле \n6. Выйти из программы')
+        \n5. Обновить информацию об автомобиле \n6. Удалить все автомобили из списка \n7. Выйти из программы')
 
         menu = input("Введите номер действия (1-6): ")
 
@@ -142,8 +147,12 @@ if __name__ == "__main__":
             car_manager.update_car(plate)
 
         elif menu == "6":
+            car_manager.remove_all_cars()
+
+        elif menu == "7":
             car_manager.save_to_file()
             print("До свидания!.")
+            
             break
 
         else:
